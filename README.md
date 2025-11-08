@@ -1,12 +1,4 @@
-Below is a **clean, GitHub-render-friendly, fixed README**.
-✅ Proper code fences
-✅ Fixed LaTeX syntax / matrix formatting
-✅ Removed stray commas / markdown breaks
-✅ Consistent sections & spacing
 
----
-
-````markdown
 # Kalman Filter — 1D Position Tracker (Streamlit)
 
 An interactive demo of a **linear Kalman Filter** for a 1-D constant-velocity system.  
@@ -25,7 +17,7 @@ Use the sliders to tune **process noise** and **measurement noise** and see how 
 ```bash
 pip install -r requirements.txt
 streamlit run streamlit_app.py
-````
+```
 
 ---
 
@@ -40,7 +32,7 @@ streamlit run streamlit_app.py
 ---
 
 ## 📐 Model (State-Space)
-
+```
 State vector:
 $$
 x_k =
@@ -83,11 +75,11 @@ z_k = H x_k + v_k, \qquad
 H = \begin{bmatrix} 1 & 0 \end{bmatrix}, \qquad
 v_k \sim \mathcal{N}(0,R), \quad R = \sigma_{\text{gps}}^2
 $$
-
+```
 ---
 
 ## 🔄 Kalman Filter — Predict/Update
-
+```
 **Predict**
 $$
 \hat{x}*{k|k-1} = A \hat{x}*{k-1|k-1} \
@@ -102,11 +94,11 @@ K_k = P_{k|k-1} H^\top S_k^{-1} \qquad \text{(Kalman gain)}\
 \hat{x}*{k|k} = \hat{x}*{k|k-1} + K_k y_k \qquad \text{(state update)}\
 P_{k|k} = (I - K_k H) P_{k|k-1} \qquad \text{(covariance update)}
 $$
-
+```
 ---
 
 ## 🎛️ App Controls → Model Parameters
-
+```
 * **Total time / Δt** — simulation length & timestep
 * **Initial velocity** — sets
   $$
@@ -115,7 +107,7 @@ $$
 * **Random seed** — reproducible noise
 * **Process noise** $\sigma_{\text{acc}}$ — trust model less → more responsive
 * **Measurement noise** $\sigma_{\text{gps}}$ — trust sensor less → smoother/lag
-
+```
 ---
 
 ## 📊 Reading the Plot
