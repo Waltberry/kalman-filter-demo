@@ -1,4 +1,4 @@
-
+````markdown
 # Kalman Filter — 1D Position Tracker (Streamlit)
 
 An interactive demo of a **linear Kalman Filter** for a 1-D constant-velocity system.  
@@ -17,7 +17,7 @@ Use the sliders to tune **process noise** and **measurement noise** and see how 
 ```bash
 pip install -r requirements.txt
 streamlit run streamlit_app.py
-
+````
 
 ---
 
